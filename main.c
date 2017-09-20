@@ -3,10 +3,6 @@
 #include <stdbool.h>
 
 void main() {
-    createMenu();
-}
-
-createMenu() {
     while (true) {
         int choice;
         printf("-----------------Menu-----------------\n");
@@ -40,7 +36,7 @@ createMenu() {
 }
 
 showStudent() {
-    FILE*myFileRead=fopen("named.txt","r");
+    FILE*myFileRead=fopen("namedoan.txt","r");
     char charArr[100];
     while(fgets(charArr,100,myFileRead)){
         printf("%s",charArr);
@@ -75,7 +71,7 @@ addStudent() {
     printf("Name: %s \n", name);
     printf("Birthday: %s \n", birthday);
     printf("Phone: %s \n", phone);
-    FILE*myFile=fopen("named.txt","w");
+    FILE*myFile=fopen("namedoan.txt","a");
     fputs(name,myFile);
     fputs(birthday,myFile);
     fputs(phone,myFile);
